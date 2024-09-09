@@ -3,7 +3,7 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <div class="col-md-6 offset-3 card text-center">
+      <div class="col-md-6 offset-3 card text-center mt-5">
         <div class="card-header">
           <ul class="nav nav-pills card-header-pills">
             <li class="nav-item">
