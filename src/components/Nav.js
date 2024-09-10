@@ -2,13 +2,13 @@ import React from 'react'
 
 const Nav = () => {
   return (
-    <div class="card-header">
-        <ul class="nav nav-pills card-header-pills">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">Top Stories</a>
+    <div className="card-header">
+        <ul className="nav nav-pills card-header-pills">
+        <li className="nav-item">
+            <a className="nav-link active" href="#">Top Stories</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Most Popular</a>
+        <li className="nav-item">
+            <a className="nav-link" href="#">Most Popular</a>
         </li>
         </ul>
     </div>

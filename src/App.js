@@ -1,11 +1,23 @@
+import { useEffect } from 'react';
 import './App.css';
 import Card from './components/Card';
 import Nav from './components/Nav';
 
 const App = () => {
+  useEffect(() => {
+    fetch(`https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=dd5zYY218PT5Pjh6TEelstBAFE242nBX`)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+      }).then((data) => {
+        console.log(data.results);
+      });
+      // debugger;
+  }, []);
   return (
     <div className="App">
-      <div class="col-md-6 offset-3 card text-center mt-5">
+      <div className="col-md-6 offset-3 card text-center mt-5">
         <Nav />
         <br />
         <Card />
