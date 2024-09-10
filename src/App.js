@@ -5,17 +5,21 @@ import Nav from './components/Nav';
 
 const App = () => {
   const [results, setResults] = useState([]);
+  
   useEffect(() => {
-    fetch(`https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=dd5zYY218PT5Pjh6TEelstBAFE242nBX`)
+    // Utilisation de la clé API depuis le fichier .env
+    const apiKey = process.env.REACT_APP_NYT_API_KEY;
+    
+    fetch(`https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=${apiKey}`)
       .then((response) => {
         if (response.ok) {
           return response.json();
         }
-      }).then((data) => {
+      })
+      .then((data) => {
         console.log(data.results);
         setResults(data.results);
       });
-      // debugger;
   }, []);
 
   return (
