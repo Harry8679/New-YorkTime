@@ -23,8 +23,8 @@ const App = () => {
       <div className="col-md-6 offset-3 card text-center mt-5">
         <Nav />
         <br />
-        {results.map((result) => {
-          return <><Card {...result} /><br /></>;
+        {results.map((result, index) => {
+          return <div key={index}><Card {...result} /><br /></div>;
         })}
       </div>
     </div>
