@@ -24,7 +24,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="col-md-6 offset-3 card text-center mt-5">
+      {/* <div className="col-md-6 offset-3 card text-center mt-5"> */}
+      <div className="col-md-6 offset-3">
         <Nav />
         <br />
         {results.map((result, index) => {
